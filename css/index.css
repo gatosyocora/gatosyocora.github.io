@@ -1,106 +1,18 @@
-div#top_title {
-  background-color: #000000;
-  color: #FFFFFF;
-  margin: 0;
-  padding: 0;
-}
-
-/* 他のWebサイトへのリンクボタン */
-div#another_site {
-  position: fixed;
-  top: 100px;
-  right: 50px;
-  z-index: 1;
-}
-#another_site ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-#another_site li {
-  display: inline;
-  margin: 0;
-  padding: 0;
-  float: left;
-}
-#another_site li a {
-  display: block;
-  background-color: #0000FF;
-  text-decoration: none;
-  color: #00FF00;
-  width: 80px;
-  height: 80px;
-  margin: 5px;
+/* TOPページの画像 */
+div#home_image {
   text-align: center;
-  font-size: 14px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
 }
-
-/* 他のページへのリンクボタン */
-div#menu {
+div#home_image img {
   position: relative;
-  left: 50%;
-  float: left;
+  width: 40vw;
+  height: auto;
+  margin: 10px;
+  left: 15vw;
 }
- #menu ul {
-   margin: 0;
-   padding: 0;
-   list-style: none;
- }
- #menu li {
-   display: inline;
-   margin: 0;
-   padding: 0;
-   position: relative;
-   float: left;
-   left: -50%;
- }
- #menu li a {
-   display: block;
-   border-bottom: 8px solid #FF0000;
-   background-color: #0000FF;
-   padding: 3px 10px;
-   text-decoration: none;
-   color: #00FF00;
-   width: 100px;
-   height: 30px;
-   margin: 1px 0px;
-   text-align: center;
-   font-size: 14px;
- }
- #menu li a:hover {
-   border-bottom: 8px solid #FF8888;
-   background-color: #8888FF;
- }
 
- /* TOPページの画像 */
- img {
-   width: 50%;
-   margin: 10px;
- }
-
- /* 制作物 */
- div#created {
-   position: relative;
-   left: 50%;
-   float: left;
- }
- #created div {
-   position: relative;
-   background-color: #FFFF00;
-   width: 300px;
-   height: 300px;
-   margin: 10px;
-   float: left;
-   left: -50%;
-   text-align: center;
-   border: 2px solid #000000;
-   border-radius: 10px;
-   -webkit-border-radius: 10px; /* for Safari & Chrome */
-   -moz-border-radius: 10px; /* for Firefox */
- }
- #created div:hover {
-   background-color: #aaaa00;
- }
+div#top_message {
+  position: relative;
+  top: 10vh;
+  left: -30vw;
+  float: right;
+}
