@@ -39,7 +39,7 @@ div#created {
   width: 10vw;
   height: auto;
 }
-#created div.production div#detail {
+#created div.production div#abstract {
   position: relative;
   top: 60px;
   left: 10px;
