@@ -1,7 +1,5 @@
 <!--
 
-var info = document.getElementById("production_info").style;
-
 // 自動的に制作物一覧を作成
 $(function() {
 
@@ -48,13 +46,7 @@ $(function() {
 
       createdDiv.appendChild(productionDiv);
 
-      productionDiv.onclick = function() {
-        info.display = "inline";
-      };
-
     }
-
-    info.display = "none";
 
   });
 
