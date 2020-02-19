@@ -6,7 +6,7 @@ function CreateWorks() {
   $.getJSON("./res/works.json", (data) => {
     var worksData = data.works;
 
-    for (let i = 0; i < work.length; i++) {
+    for (let i = 0; i < worksData.length; i++) {
       let workdiv = document.createElement('div');
       workdiv.id = worksData[i].name;
       workdiv.class = "work fly";
