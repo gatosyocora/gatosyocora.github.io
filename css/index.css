@@ -1,18 +1,119 @@
-/* TOPページの画像 */
-div#home_image {
-  text-align: center;
-}
-div#home_image img {
-  position: relative;
-  width: 40vw;
-  height: auto;
-  margin: 10px;
-  left: 15vw;
+body {
+  background-color: #dddddd;
 }
 
-div#top_message {
-  position: relative;
-  top: 10vh;
-  left: -30vw;
-  float: right;
+@media screen and (min-width: 767px) {
+  div#header {
+    background-color: #0088FF;
+    color: white;
+    font-size: 30pt;
+    font-weight: bold;
+  }
+
+  div#name {
+    font-size: 20pt;
+    font-weight: bold;
+  }
+
+  img#myicon {
+    width: 120px;
+    height: 120px;
+    margin: 30px;
+    border-radius: 20px;
+  }
+
+  div#status {
+    margin: auto;
+  }
+
+  div#profile {
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: solid;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+  }
+
+  div#works {
+    display: flex;
+  }
+
+  div.row {
+    display: flex;
+  }
+
+  div.border {
+    border: solid;
+  }
+
+  div.snsicon {
+    padding: 5px;
+  }
+
+  img.snsicon {
+    width: 40px;
+  }
+
+  img.snsicon2 {
+    height: 40px;
+  }
+
+  div.work {
+    border: solid;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    background-color: #66ccFF;
+    text-align: center;
+  }
+
+  div.work {
+    border: solid #44aadd;
+    border-radius: 20px 20px 20px 20px;
+    width: 250px;
+    height: 250px;
+    margin: 5px;
+    background-color: #55bbee;
+    text-align: center;
+  }
+
+  div.work:hover {
+    border: solid #55bbee;
+    background-color: #66ccFF;
+  }
+
+  div.work div.work-name {
+    font-size: 15px;
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+  }
+
+  div.work img {
+    width: 180px;
+    margin: 2px;
+  }
+
+  div.fly {
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+
+  div.fly:hover {
+      -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      transform: translateY(-5px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 479px) {
+
 }

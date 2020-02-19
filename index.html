@@ -1,40 +1,78 @@
 <!DOCTYPE html>
-<!-- 参考サイト
-  http://yume.hacca.jp/koiki/css/listyoko.htm
-  http://goshikiprint.com/magazine/design/border-radius
-  http://shiru-web.com/2017/06/26/01-62/
--->
 <html lang="ja">
 
  <head>
-
-   <meta charset="utf-8">
-   <title>がとーしょこらのほーむぺーじ(仮)</title>
+   <meta name="viewport" charset="utf-8">
+   <title>gatosyocora's page</title>
    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-   <script type="text/javascript" src="./js/main.js"></script>
-   <link rel="stylesheet" type="text/css" href="./css/main.css">
+   <script type="text/javascript" src="./js/index.js"></script>
    <link rel="stylesheet" type="text/css" href="./css/index.css">
  </head>
 
  <body>
-
    <div id="header">
+     <div>gatosyocora's page</div>
    </div>
 
    <div id="contents">
-     <div id="home_image">
-       <img src="./image/gatosyocora.png">
+
+     <div id="profile" class="row border">
+       <img id="myicon" src="./image/icon_ukon.jpg">
+       <div id="status">
+         <div id="name">gatosyocora</div>
+         <p>
+           VR Engineer / Cognitive Psychology
+         </p>
+         <div id="sns" class="row">
+           <div class="snsicon">
+             <a href="https://twitter.com/gatosyocora">
+               <img class="snsicon" src="./image/logo/twitter-logo.png">
+             </a>
+           </div>
+           <div class="snsicon">
+             <a href="https://github.com/gatosyocora">
+               <img class="snsicon" src="./image/logo/github-logo.png">
+             </a>
+           </div>
+           <div class="snsicon">
+             <a href="https://qiita.com/gatosyocora">
+               <img class="snsicon2" src="./image/logo/qiita-logo.png">
+             </a>
+           </div>
+           <div class="snsicon">
+             <a href="https://gatosyocora.booth.pm/">
+               <img class="snsicon2" src="./image/logo/booth-logo.png">
+             </a>
+           </div>
+         </div>
+       </div>
      </div>
 
-     <div id="top_message">
-       <p>
-         お越しいただきありがとうございます。<br>
-         まだコンテンツが少ないですが, ゆっくりしていってください。
-       </p>
+     <div id="works">
+       <!--
+       <div id="VRCAvatarEditor" class="work fly" onclick="window.open('https://booth.pm/ja/items/1258744','_blank')">
+         <div class="work-name">VRCAvatarEditor</div>
+         <img src="./image/work/vrcavatareditor.jpg">
+       </div>
+       <div id="MeshDeleterWithTexture" class="work fly" onclick="window.open('https://booth.pm/ja/items/1501527','_blank')">
+         <div class="work-name">MeshDeleterWithTexture</div>
+         <img src="./image/work/meshdeleterwithtexture.jpg">
+       </div>
+       <div id="VitDeck" class="work fly" onclick="window.open('https://github.com/VitDeck/VitDeck-for-vket4','_blank')">
+         <div class="work-name">VitDeck</div>
+         <img src="./image/work/noimage.png">
+       </div>
+       <div id="VirtualAssistant" class="work fly" onclick="window.open('https://twitter.com/gatosyocora/status/972443409339244545?s=20','_blank')">
+         <div class="work-name">VirtualAssistant</div>
+         <img src="./image/work/virtualassistant.png">
+       </div>
+     !-->
      </div>
 
    </div>
 
- </body>
+   <div id="footer">
+   </div>
 
+ </body>
 </html>
