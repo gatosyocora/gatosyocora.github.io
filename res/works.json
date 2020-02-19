@@ -13,12 +13,12 @@
     {
       "name" : "vitdeck",
       "imageurl" : "",
-      "url" : ""
+      "url" : "https://github.com/VitDeck/VitDeck-for-vket4"
     },
     {
       "name" : "virtualassistant",
-      "imageurl" : "",
-      "url" : ""
+      "imageurl" : "./image/work/virtualassistant.png",
+      "url" : "https://twitter.com/gatosyocora/status/972443409339244545?s=20"
     }
   ]
 }
