@@ -108,12 +108,37 @@ body {
       -ms-transform: translateY(-5px);
       transform: translateY(-5px);
   }
+
+  div#warning {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  div#warning {
+    display: block;
+    
+    border: solid #000000;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    color: black;
+    -webkit-text-stroke: 1px white;
 
-}
-
-@media screen and (max-width: 479px) {
-
+    background-image: linear-gradient(
+    	-45deg,
+    	#ffff00 25%,
+    	#000000 25%,
+    	#000000 50%,
+    	#ffff00 50%,
+    	#ffff00 75%,
+    	#000000 75%,
+    	#000000
+    );
+    background-size: 40px 40px;
+    background-attachment: fixed;
+  }
 }
