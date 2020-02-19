@@ -1,7 +1,7 @@
 window.onload = CreateWorks();
 
 function CreateWorks() {
-  let works = document.getElementById("works");
+  var works = document.getElementById('works');
 
   $.getJSON("./res/works.json", (data) => {
     var worksData = data.works;
