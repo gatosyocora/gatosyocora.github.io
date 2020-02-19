@@ -2,13 +2,18 @@ body {
   background-color: #dddddd;
 }
 
+img {
+  pointer-events: none;
+}
+
+div#header {
+  background-color: #0088FF;
+  color: white;
+  font-size: 30pt;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 767px) {
-  div#header {
-    background-color: #0088FF;
-    color: white;
-    font-size: 30pt;
-    font-weight: bold;
-  }
 
   div#name {
     font-size: 20pt;
@@ -73,7 +78,7 @@ body {
 
   div.work {
     border: solid #44aadd;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
     width: 250px;
     height: 250px;
     margin: 5px;
@@ -115,9 +120,17 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+
+  img#myicon {
+    width: 120px;
+    height: 120px;
+    margin: 30px;
+    border-radius: 60px;
+  }
+
   div#warning {
     display: block;
-    
+
     border: solid #000000;
     border-radius: 20px;
     font-weight: bold;
