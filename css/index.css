@@ -47,7 +47,10 @@ div#header {
     background-color: white;
   }
 
-  div#works {
+  div#works .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   div#floatingbutton {
