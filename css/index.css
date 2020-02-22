@@ -26,7 +26,9 @@ div#name {
 img#myicon {
   width: 120px;
   height: 120px;
-  margin: 30px;
+  margin: auto;
+  margin-left: 30px;
+  margin-right: 30px;
   border-radius: 60px;
 }
 
@@ -40,9 +42,14 @@ div#profile {
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   border: solid;
   border-radius: 20px;
-  padding: 10px;
   background-color: white;
 }
 
@@ -128,12 +135,6 @@ div.work div.work-name {
 div.work img {
   width: 200px;
   margin: auto;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 div.work div.tags {
