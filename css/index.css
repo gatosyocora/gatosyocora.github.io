@@ -59,11 +59,6 @@ div#works .container {
   flex-wrap: wrap;
 }
 
-div#skills img {
-  width: 20px;
-  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.6));
-}
-
 div#floatingbutton {
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
   position: fixed;
@@ -155,11 +150,21 @@ div.work div.tags {
 
 span.skillname {
   display: inline-block;
-  width: 150px;
+  width: 200px;
+}
+
+div#skills div.container ul li {
+  margin-bottom: 5px;
+  font-size: 18px;
 }
 
 div#skills div.container ul li span {
   margin-right: 100px;
+}
+
+div#skills img {
+  width: 25px;
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.6));
 }
 
 div.fly {
