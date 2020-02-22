@@ -18,182 +18,148 @@ div#header {
   font-weight: bold;
 }
 
+div#name {
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+img#myicon {
+  width: 120px;
+  height: 120px;
+  margin: 30px;
+  border-radius: 60px;
+}
+
+div#status {
+  margin: auto;
+}
+
+div#profile {
+  width: 50%;
+  min-width: 600px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: solid;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: white;
+}
+
+div#works .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+div#skills img {
+  width: 20px;
+}
+
+div#floatingbutton {
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 9;
+}
+
+div#floatingbutton div#buttonicon {
+  width: 80px;
+  height: 80px;
+}
+
+div#floatingbutton div#buttonicon img {
+  width: 80px;
+  height: 80px;
+}
+
+div.row {
+  display: flex;
+}
+
+div.border {
+  border: solid;
+}
+
+div.title {
+  background-color: #ffdd00;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+div.snsicon {
+  padding: 5px;
+}
+
+img.snsicon {
+  width: 40px;
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.6));
+}
+
+img.snsicon2 {
+  height: 40px;
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.6));
+}
+
+div.work {
+  border: solid #44aadd;
+  border-radius: 5px;
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+  background-color: #55bbee;
+  text-align: center;
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+}
+
+div.work:hover {
+  border: solid #55bbee;
+  background-color: #66ccFF;
+}
+
+div.work div.work-name {
+  font-size: 20px;
+  margin: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+div.work img {
+  width: 200px;
+  margin: auto;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+div.fly {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+div.fly:hover {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
 @media screen and (min-width: 767px) {
-
-  div#name {
-    font-size: 20pt;
-    font-weight: bold;
-  }
-
-  img#myicon {
-    width: 120px;
-    height: 120px;
-    margin: 30px;
-    border-radius: 60px;
-  }
-
-  div#status {
-    margin: auto;
-  }
-
-  div#profile {
-    width: 50%;
-    min-width: 600px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: solid;
-    border-radius: 20px;
-    padding: 10px;
-    background-color: white;
-  }
-
-  div#works .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  div#skills img {
-    width: 20px;
-  }
-
-  div#floatingbutton {
-    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    z-index: 9;
-  }
-
-  div#floatingbutton div#buttonicon {
-    width: 120px;
-    height: 120px;
-    transition: transform 0.4s ease-out;
-  }
-
-  div#floatingbutton div#buttonicon:hover {
-    transform: rotate(15deg);
-    -webkit-transform: rotate(15deg);
-    -ms-transform: rotate(15deg);
-  }
-
-  div#floatingbutton div#buttonicon + div#message {
-    display: none;
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    z-index: 8;
-    transition-duration:.4s;
-  }
-
-  div#floatingbutton div#buttonicon:hover + div#message {
-    -webkit-transform: translateY(-100px);
-    -ms-transform: translateY(-100px);
-    transform: translateY(-100px);
-    display: block;
-  }
-
-  div#floatingbutton div#buttonicon img {
-    width: 120px;
-    height: 120px;
-    border-radius: 60px;
-  }
-
-  div#floatingbutton div#message img {
-    height: 120px;
-  }
-
-  div.row {
-    display: flex;
-  }
-
-  div.border {
-    border: solid;
-  }
-
-  div.title {
-    background-color: #ffdd00;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px;
-    margin: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  div.snsicon {
-    padding: 5px;
-  }
-
-  img.snsicon {
-    width: 40px;
-    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.6));
-  }
-
-  img.snsicon2 {
-    height: 40px;
-    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.6));
-  }
-
-  div.work {
-    border: solid #44aadd;
-    border-radius: 5px;
-    width: 300px;
-    height: 300px;
-    margin: 5px;
-    background-color: #55bbee;
-    text-align: center;
-    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
-  }
-
-  div.work:hover {
-    border: solid #55bbee;
-    background-color: #66ccFF;
-  }
-
-  div.work div.work-name {
-    font-size: 20px;
-    margin: 10px;
-    color: white;
-    font-weight: bold;
-  }
-
-  div.work img {
-    width: 200px;
-    margin: auto;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  div.fly {
-    -webkit-transition: all .3s;
-    transition: all .3s;
-  }
-
-  div.fly:hover {
-      -webkit-transform: translateY(-5px);
-      -ms-transform: translateY(-5px);
-      transform: translateY(-5px);
-  }
 
   div#warning {
     display: none;
   }
+
 }
 
 @media screen and (max-width: 767px) {
-
-  img#myicon {
-    width: 120px;
-    height: 120px;
-    margin: 30px;
-    border-radius: 60px;
-  }
 
   div#warning {
     display: block;
