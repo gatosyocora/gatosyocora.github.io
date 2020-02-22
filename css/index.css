@@ -29,7 +29,7 @@ div#header {
     width: 120px;
     height: 120px;
     margin: 30px;
-    border-radius: 20px;
+    border-radius: 60px;
   }
 
   div#status {
@@ -38,6 +38,7 @@ div#header {
 
   div#profile {
     width: 50%;
+    min-width: 600px;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
