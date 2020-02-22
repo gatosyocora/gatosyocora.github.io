@@ -53,6 +53,10 @@ div#header {
     flex-wrap: wrap;
   }
 
+  div#skills img {
+    width: 20px;
+  }
+
   div#floatingbutton {
     filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
     position: fixed;
