@@ -6,6 +6,63 @@
    <title>gatosyocora's page</title>
    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
    <link rel="stylesheet" type="text/css" href="./css/index.css">
+   <script>
+   class SkillElement extends HTMLElement {
+     get name() {
+       return this._name;
+     }
+     set name(v) {
+       this.setAttribute("name", v);
+     }
+     get level() {
+       return this._level;
+     }
+     set level(v) {
+       this.setAttribute("level", v);
+     }
+
+     constructor() {
+       super();
+       this._name = null;
+       this._level = 0;
+     }
+     static get observedAttributes() {
+       return ["name", "level"];
+     }
+     attributeChangedCallback(attrName, oldValue, newValue)  {
+       if (attrName == "name") {
+         this._name = newValue;
+       }
+       else if (attrName == "level") {
+         this._level = newValue;
+       }
+       this._updateRendering();
+     }
+
+     _updateRendering() {
+       this.innerHTML = null;
+       var li = document.createElement("li");
+       this.appendChild(li);
+       var nameSpan = document.createElement("span");
+       nameSpan.textContent = this._name;
+       li.appendChild(nameSpan);
+       var starSpan = document.createElement("span");
+       starSpan.class = "stars";
+       li.appendChild(starSpan);
+       for (var i = 0; i < this._level; i++) {
+         var star = document.createElement("img");
+         star.src = "./image/star1.png";
+         starSpan.appendChild(star);
+       }
+       for (var i = 0; i < 5 - this._level; i++) {
+         var star = document.createElement("img");
+         star.src = "./image/star0.png";
+         starSpan.appendChild(star);
+       }
+     }
+   }
+   window.customElements.define("li-skill-element", SkillElement);
+   </script>
  </head>
 
  <body>
@@ -81,96 +138,14 @@
        </div>
        <div class="container">
          <ul>
-           <li>
-             <span>C#</span>
-             <span class="stars">
-               <img src="./image/star1.png">
-               <img src="./image/star1.png">
-               <img src="./image/star1.png">
-               <img src="./image/star0.png">
-               <img src="./image/star0.png">
-             </span>
-           </li>
-           <li>
-             <span>Unity</span>
-             <span class="stars">
-               <img src="./image/star1.png">
-               <img src="./image/star1.png">
-               <img src="./image/star1.png">
-               <img src="./image/star0.png">
-               <img src="./image/star0.png">
-             </span>
-           </li>
-           <li>
-             <span>UnityEditor拡張</span>
-             <span class="stars">
-               <img src="./image/star1.png">
-               <img src="./image/star1.png">
-               <img src="./image/star1.png">
-               <img src="./image/star0.png">
-               <img src="./image/star0.png">
-             </span>
-           </li>
-           <li>
-             <span>HLSL(ShaderLab)</span>
-             <span class="stars">
-               <img src="./image/star1.png">
-               <img src="./image/star1.png">
-               <img src="./image/star0.png">
-               <img src="./image/star0.png">
-               <img src="./image/star0.png">
-             </span>
-           </li>
-           <li>
-             <span>Java</span>
-             <span class="stars">
-               <img src="./image/star1.png">
-               <img src="./image/star1.png">
-               <img src="./image/star0.png">
-               <img src="./image/star0.png">
-               <img src="./image/star0.png">
-             </span>
-           </li>
-           <li>
-             <span>kotlin</span>
-             <span class="stars">
-               <img src="./image/star1.png">
-               <img src="./image/star0.png">
-               <img src="./image/star0.png">
-               <img src="./image/star0.png">
-               <img src="./image/star0.png">
-             </span>
-           </li>
-           <li>
-             <span>cmd</span>
-             <span class="stars">
-               <img src="./image/star1.png">
-               <img src="./image/star1.png">
-               <img src="./image/star1.png">
-               <img src="./image/star0.png">
-               <img src="./image/star0.png">
-             </span>
-           </li>
-           <li>
-             <span>git</span>
-             <span class="stars">
-               <img src="./image/star1.png">
-               <img src="./image/star1.png">
-               <img src="./image/star0.png">
-               <img src="./image/star0.png">
-               <img src="./image/star0.png">
-             </span>
-           </li>
-           <li>
-             <span>認知心理学</span>
-             <span class="stars">
-               <img src="./image/star1.png">
-               <img src="./image/star1.png">
-               <img src="./image/star1.png">
-               <img src="./image/star0.png">
-               <img src="./image/star0.png">
-             </span>
-           </li>
+          <li-skill-element name="C#" level="3"/>
+          <li-skill-element name="Unity" level="3"/>
+          <li-skill-element name="HLSL(ShaderLab)" level="2"/>
+          <li-skill-element name="Java" level="2"/>
+          <li-skill-element name="kotlin" level="1"/>
+          <li-skill-element name="cmd" level="3"/>
+          <li-skill-element name="git" level="2"/>
+          <li-skill-element name="認知心理学" level="3"/>
          </ul>
        </div>
      </div>
