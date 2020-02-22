@@ -158,6 +158,10 @@ span.skillname {
   width: 150px;
 }
 
+div#skills div.container ul li span {
+  margin-right: 100px;
+}
+
 div.fly {
   -webkit-transition: all .3s;
   transition: all .3s;

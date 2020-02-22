@@ -12,13 +12,22 @@ class SkillElement extends HTMLElement {
     this.setAttribute("level", v);
   }
 
+  get detail() {
+    return this._detail;
+  }
+
+  set detail(v) {
+    this.setAttribute("detail", v);
+  }
+
   constructor() {
     super();
     this._name = null;
     this._level = 0;
+    this._detail = null;
   }
   static get observedAttributes() {
-    return ["name", "level"];
+    return ["name", "level", "detail"];
   }
   attributeChangedCallback(attrName, oldValue, newValue)  {
     if (attrName == "name") {
@@ -26,6 +35,9 @@ class SkillElement extends HTMLElement {
     }
     else if (attrName == "level") {
       this._level = newValue;
+    }
+    else if (attrName == "detail") {
+      this._detail = newValue;
     }
     this._updateRendering();
   }
@@ -51,6 +63,10 @@ class SkillElement extends HTMLElement {
       star.src = "./image/star0.png";
       starSpan.appendChild(star);
     }
+    var detailSpan = document.createElement("span");
+    detailSpan.className = "skilldetail";
+    detailSpan.textContent = this._detail;
+    li.appendChild(detailSpan);
   }
 }
 window.customElements.define("li-skill-element", SkillElement);
