@@ -35,6 +35,7 @@ class SkillElement extends HTMLElement {
     var li = document.createElement("li");
     this.appendChild(li);
     var nameSpan = document.createElement("span");
+    nameSpan.className = "skillname";
     nameSpan.textContent = this._name;
     li.appendChild(nameSpan);
     var starSpan = document.createElement("span");

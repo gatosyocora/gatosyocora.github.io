@@ -136,6 +136,11 @@ div.work img {
   bottom: 0;
 }
 
+span.skillname {
+  display: inline-block;
+  width: 150px;
+}
+
 div.fly {
   -webkit-transition: all .3s;
   transition: all .3s;
