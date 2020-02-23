@@ -58,9 +58,6 @@ loader.load(
 const gridHelper = new THREE.GridHelper( 10, 10 );
 scene.add( gridHelper );
 
-const axesHelper = new THREE.AxesHelper( 5 );
-scene.add( axesHelper );
-
 function animate() {
   requestAnimationFrame( animate );
   renderer.render( scene, camera );
