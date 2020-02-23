@@ -191,20 +191,11 @@ div#works div.work-name {
 
 div#works div.work img {
   width: 200px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   margin: auto;
 }
 
 div#works div.work div.tags {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  bottom: 10px;
+
 }
 
 /*skills*/
