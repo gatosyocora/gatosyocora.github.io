@@ -5,8 +5,12 @@
    <meta name="viewport" charset="utf-8">
    <title>gatosyocora's page</title>
    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+   <script src="https://unpkg.com/three@0.111.0/build/three.js"></script>
+	 <script src="https://unpkg.com/three@0.111.0/examples/js/loaders/GLTFLoader.js"></script>
+	 <script src="https://unpkg.com/three@0.111.0/examples/js/controls/OrbitControls.js"></script>
+   <script type="text/javascript" src="./js/three-vrm.js"></script>
    <link rel="stylesheet" type="text/css" href="./css/index.css">
-   <script src="./js/customelements.js"></script>
+   <script type="text/javascript" src="./js/customelements.js"></script>
  </head>
 
  <body>
@@ -110,7 +114,9 @@
      </div>
    </div>
 
-   <!--<script type="text/javascript" src="./js/index.js"></script>-->
+   <div id="grayfilter" class="mask">
+   </div>
 
+   <script type="text/javascript" src="./js/index.js"></script>
  </body>
 </html>
