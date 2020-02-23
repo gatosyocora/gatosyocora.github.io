@@ -1,4 +1,5 @@
 let viewer = document.getElementById('modelviewer');
+let loading = document.getElementById('loading');
 
 // renderer
 const renderer = new THREE.WebGLRenderer();
@@ -41,6 +42,8 @@ loader.load(
       scene.add( vrm.scene );
 
       vrm.humanoid.getBoneNode( THREE.VRMSchema.HumanoidBoneName.Hips ).rotation.y = Math.PI;
+
+      loading.style.visibility = "hidden";
 
     } );
 
