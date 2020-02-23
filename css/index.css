@@ -53,8 +53,6 @@ div.mask {
   width:100%;
   height:100%;
 
-  background-color:#000000;
-  opacity:0.5;
   z-index:1;
 
   visibility: hidden;
@@ -227,13 +225,29 @@ div#skills img {
   filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.6));
 }
 
+/* 3dmodelviewer */
+div#modelviewer {
+  padding: 0;
+}
+
+div#closeButton,
+div#closeButton img
+{
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  z-index: 9;
+  width: 100px;
+  height: 100px;
+}
+
 /* floatingbutton */
 div#floatingbutton {
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
   position: fixed;
   right: 30px;
   bottom: 30px;
-  z-index: 9;
+  z-index: 1;
 }
 
 div#floatingbutton div#buttonicon,

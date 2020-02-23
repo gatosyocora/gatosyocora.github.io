@@ -1,10 +1,10 @@
-var mask = document.getElementById('grayfilter');
+let viewer = document.getElementById('modelviewer');
 
 // renderer
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.setPixelRatio( window.devicePixelRatio );
-document.body.appendChild( renderer.domElement );
+viewer.appendChild( renderer.domElement );
 
 // camera
 const camera = new THREE.PerspectiveCamera( 30.0, window.innerWidth / window.innerHeight, 0.1, 20.0 );
@@ -62,11 +62,16 @@ const axesHelper = new THREE.AxesHelper( 5 );
 scene.add( axesHelper );
 
 function animate() {
-
   requestAnimationFrame( animate );
-
   renderer.render( scene, camera );
-
 }
 
 animate();
+
+function showViewer() {
+  viewer.style.visibility = "visible";
+}
+
+function closeViewer() {
+  viewer.style.visibility = "hidden";
+}
