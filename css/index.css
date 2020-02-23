@@ -26,6 +26,8 @@ img {
 
 div.row {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 div.border {
@@ -71,19 +73,41 @@ div#contents div.container {
 
 /* profile */
 div#profile {
-  width: 50%;
-  min-width: 700px;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 20px;
 
   border: solid;
   border-radius: 20px;
   background-color: white;
+}
+
+/* PC */
+@media screen and (min-width: 767px) {
+
+  div#profile {
+    width: 50%;
+    min-width: 700px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+/* smartphone */
+@media screen and (max-width: 767px) {
+
+  div#profile {
+    text-align: center;
+  }
+
+  div#profile div#sns {
+    display: flex;
+  }
+
 }
 
 div#profile div#name {
@@ -100,14 +124,14 @@ div#profile img#myicon {
   border-radius: 60px;
 }
 
-div#profile div#status {
-  margin: auto;
-}
-
 div#profile img.snsicon {
   height: 40px;
   width: auto;
   filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.6));
+}
+
+div#profile div#status {
+  margin: auto;
 }
 
 /* works */
@@ -203,6 +227,7 @@ div#floatingbutton div#buttonicon img{
   height: 80px;
 }
 
+/* PC */
 @media screen and (min-width: 767px) {
 
   div#warning {
@@ -211,6 +236,7 @@ div#floatingbutton div#buttonicon img{
 
 }
 
+/* smartphone */
 @media screen and (max-width: 767px) {
 
   div#warning {
