@@ -66,6 +66,7 @@ div#contents div.title {
 div#contents div.container {
   padding-top: 20px;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 /* profile */
@@ -159,18 +160,21 @@ div#works div.work div.tags {
 
 /*skills*/
 div#skills div.skill {
-  width: 90%;
+  width: 70%;
   border: solid var(--basedarkcolor);
   border-radius: 5px;
   margin-bottom: 5px;
   font-size: 18px;
   background-color: var(--basecolor);
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: left;
 }
 
 div#skills div.container div {
-  margin-right: 50px;
-  margin-left: 50px;
   display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 div#skills div.skillname {
