@@ -303,7 +303,7 @@ div#modelviewer div#loading {
   left: 0;
   right: 0;
   margin: auto;
-  visibility: visible;
+  visibility: hidden;
 }
 
 /* floatingbutton */

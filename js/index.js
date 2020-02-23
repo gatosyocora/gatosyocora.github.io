@@ -1,74 +1,85 @@
 let viewer = document.getElementById('modelviewer');
 let loading = document.getElementById('loading');
 
-// renderer
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerWidth, window.innerHeight );
-renderer.setPixelRatio( window.devicePixelRatio );
-viewer.appendChild( renderer.domElement );
+var loaded = false;
 
-// camera
-const camera = new THREE.PerspectiveCamera( 30.0, window.innerWidth / window.innerHeight, 0.1, 20.0 );
-camera.position.set( 0.0, 1.0, 5.0 );
+function loadVRM() {
 
-// camera controls
-const controls = new THREE.OrbitControls( camera, renderer.domElement );
-controls.screenSpacePanning = true;
-controls.target.set( 0.0, 1.0, 0.0 );
-controls.update();
+  loading.style.visibility = "visible";
 
-// scene
-const scene = new THREE.Scene();
+  // renderer
+  const renderer = new THREE.WebGLRenderer();
+  renderer.setSize( window.innerWidth, window.innerHeight );
+  renderer.setPixelRatio( window.devicePixelRatio );
+  viewer.appendChild( renderer.domElement );
 
-// light
-const light = new THREE.DirectionalLight( 0xffffff );
-light.position.set( 1.0, 1.0, 1.0 ).normalize();
-scene.add( light );
+  // camera
+  const camera = new THREE.PerspectiveCamera( 30.0, window.innerWidth / window.innerHeight, 0.1, 20.0 );
+  camera.position.set( 0.0, 1.0, 5.0 );
 
-// gltf and vrm
-const loader = new THREE.GLTFLoader();
-loader.crossOrigin = 'anonymous';
-loader.load(
+  // camera controls
+  const controls = new THREE.OrbitControls( camera, renderer.domElement );
+  controls.screenSpacePanning = true;
+  controls.target.set( 0.0, 1.0, 0.0 );
+  controls.update();
 
-  // URL of the VRM you want to load
-  './res/ukon_gatosyocora.vrm',
+  // scene
+  const scene = new THREE.Scene();
 
-  // called when the resource is loaded
-  ( gltf ) => {
-    // generate VRM instance from gltf
-    THREE.VRM.from( gltf ).then( ( vrm ) => {
+  // light
+  const light = new THREE.DirectionalLight( 0xffffff );
+  light.position.set( 1.0, 1.0, 1.0 ).normalize();
+  scene.add( light );
 
-      console.log( vrm );
-      scene.add( vrm.scene );
+  // gltf and vrm
+  const loader = new THREE.GLTFLoader();
+  loader.crossOrigin = 'anonymous';
+  loader.load(
 
-      vrm.humanoid.getBoneNode( THREE.VRMSchema.HumanoidBoneName.Hips ).rotation.y = Math.PI;
+    // URL of the VRM you want to load
+    './res/ukon_gatosyocora.vrm',
 
-      loading.style.visibility = "hidden";
+    // called when the resource is loaded
+    ( gltf ) => {
+      // generate VRM instance from gltf
+      THREE.VRM.from( gltf ).then( ( vrm ) => {
 
-    } );
+        console.log( vrm );
+        scene.add( vrm.scene );
 
-  },
+        vrm.humanoid.getBoneNode( THREE.VRMSchema.HumanoidBoneName.Hips ).rotation.y = Math.PI;
 
-  // called while loading is progressing
-  ( progress ) => console.log( 'Loading model...', 100.0 * ( progress.loaded / progress.total ), '%' ),
+        loading.style.visibility = "hidden";
+        loaded = true;
 
-  // called when loading has errors
-  ( error ) => console.error( error )
+      } );
 
-);
+    },
 
-// helpers
-const gridHelper = new THREE.GridHelper( 10, 10 );
-scene.add( gridHelper );
+    // called while loading is progressing
+    ( progress ) => console.log( 'Loading model...', 100.0 * ( progress.loaded / progress.total ), '%' ),
 
-function animate() {
-  requestAnimationFrame( animate );
-  renderer.render( scene, camera );
+    // called when loading has errors
+    ( error ) => console.error( error )
+
+  );
+
+  // helpers
+  const gridHelper = new THREE.GridHelper( 10, 10 );
+  scene.add( gridHelper );
+
+  function animate() {
+    requestAnimationFrame( animate );
+    renderer.render( scene, camera );
+  }
+
+  animate();
 }
 
-animate();
-
 function showViewer() {
+  if (!loaded) {
+    loadVRM();
+  }
   viewer.style.visibility = "visible";
 }
 
