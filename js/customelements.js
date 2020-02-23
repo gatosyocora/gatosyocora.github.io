@@ -44,29 +44,30 @@ class SkillElement extends HTMLElement {
 
   _updateRendering() {
     this.innerHTML = null;
-    var li = document.createElement("li");
-    this.appendChild(li);
-    var nameSpan = document.createElement("span");
-    nameSpan.className = "skillname";
-    nameSpan.textContent = this._name;
-    li.appendChild(nameSpan);
-    var starSpan = document.createElement("span");
-    starSpan.class = "stars";
-    li.appendChild(starSpan);
+    var skill = document.createElement("div");
+    skill.className = "skill";
+    this.appendChild(skill);
+    var name = document.createElement("div");
+    name.className = "skillname";
+    name.textContent = this._name;
+    skill.appendChild(name);
+    var stars = document.createElement("div");
+    stars.class = "stars";
+    skill.appendChild(stars);
     for (var i = 0; i < this._level; i++) {
       var star = document.createElement("img");
       star.src = "./image/star1.png";
-      starSpan.appendChild(star);
+      stars.appendChild(star);
     }
     for (var i = 0; i < 5 - this._level; i++) {
       var star = document.createElement("img");
       star.src = "./image/star0.png";
-      starSpan.appendChild(star);
+      stars.appendChild(star);
     }
-    var detailSpan = document.createElement("span");
-    detailSpan.className = "skilldetail";
-    detailSpan.textContent = this._detail;
-    li.appendChild(detailSpan);
+    var detail = document.createElement("div");
+    detail.className = "skilldetail";
+    detail.textContent = this._detail;
+    skill.appendChild(detail);
   }
 }
-window.customElements.define("li-skill-element", SkillElement);
+window.customElements.define("skill-element", SkillElement);

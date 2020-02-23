@@ -148,18 +148,29 @@ div.work div.tags {
   color: black;
 }
 
-span.skillname {
-  display: inline-block;
-  width: 200px;
-}
-
-div#skills div.container ul li {
+div#skills div.skill {
+  width: 90%;
+  border: solid #44aadd;
+  border-radius: 5px;
   margin-bottom: 5px;
   font-size: 18px;
+  background-color: #55bbee;
 }
 
-div#skills div.container ul li span {
-  margin-right: 100px;
+div#skills div.container {
+  margin:auto;
+}
+
+div#skills div.container div {
+  margin-right: 50px;
+  margin-left: 50px;
+  display: inline-block;
+}
+
+div.skillname {
+  width: 160px;
+  color: white;
+  font-weight: bold;
 }
 
 div#skills img {
