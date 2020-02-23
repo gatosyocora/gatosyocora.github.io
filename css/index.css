@@ -169,8 +169,6 @@ div#works div.container {
 div#works div.work {
   border: solid var(--basedarkcolor);
   border-radius: 5px;
-  width: 300px;
-  height: 300px;
   margin: 5px;
   background-color: var(--basecolor);
   text-align: center;
@@ -180,6 +178,24 @@ div#works div.work {
 div#works div.work:hover {
   border: solid var(--basedarkcolor-focus);
   background-color: var(--basecolor-focus);
+}
+
+/* PC */
+@media screen and (min-width: 767px) {
+  div#works div.work {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Smartphone */
+@media screen and (max-width: 767px) {
+  div#works div.work {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 10px;
+  }
 }
 
 div#works div.work-name {
