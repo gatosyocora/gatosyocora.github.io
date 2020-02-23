@@ -66,6 +66,29 @@ div#header {
   font-weight: bold;
 }
 
+/* navigator */
+div#navigator {
+  background-color: var(--basecolor);
+  color: white;
+  font-size: 20pt;
+  text-align: center;
+}
+
+div#navigator a:link,
+div#navigator a:visited,
+div#navigator a:hover,
+div#navigator a:active {
+  color: white;
+}
+
+div#navigator div {
+  display: inline-block;
+  border-left: solid white;
+  border-right: solid white;
+  margin: 10px;
+  padding: 10px;
+}
+
 /*contents*/
 div#contents div.title {
   background-color: var(--subcolor);
