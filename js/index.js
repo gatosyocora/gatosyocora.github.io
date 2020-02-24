@@ -19,8 +19,11 @@ function loadVRM() {
 
   // camera controls
   const controls = new THREE.OrbitControls( camera, renderer.domElement );
-  controls.screenSpacePanning = true;
+  controls.enablePan = false;
   controls.target.set( 0.0, 1.0, 0.0 );
+  // limit of orbit vertically
+  controls.minPolarAngle = 0;
+  controls.maxPolarAngle = Math.PI * 0.65;
   controls.update();
 
   // scene
