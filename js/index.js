@@ -1,7 +1,8 @@
 let viewer = document.getElementById('modelviewer');
 let loading = document.getElementById('loading');
+let errored = document.getElementById('errored');
 
-var loaded = false;
+var isLoaded = false;
 
 function loadVRM() {
 
@@ -40,7 +41,7 @@ function loadVRM() {
   loader.load(
 
     // URL of the VRM you want to load
-    './res/ukon_gatosyocora.vrm',
+    'http://drive.google.com/uc?export=view&id=18YWLwbV_2U4Amh2EDlYA8aOrql1bpt14',
 
     // called when the resource is loaded
     ( gltf ) => {
@@ -53,7 +54,7 @@ function loadVRM() {
         vrm.humanoid.getBoneNode( THREE.VRMSchema.HumanoidBoneName.Hips ).rotation.y = Math.PI;
 
         loading.style.visibility = "hidden";
-        loaded = true;
+        isLoaded = true;
 
       } );
 
@@ -63,7 +64,11 @@ function loadVRM() {
     ( progress ) => console.log( 'Loading model...', 100.0 * ( progress.loaded / progress.total ), '%' ),
 
     // called when loading has errors
-    ( error ) => console.error( error )
+    ( error ) => {
+      console.error( error );
+      loading.style.visibility = "hidden";
+      errored.style.visibility = "visible";
+    }
 
   );
 
@@ -80,7 +85,7 @@ function loadVRM() {
 }
 
 function showViewer() {
-  if (!loaded) {
+  if (!isLoaded) {
     loadVRM();
   }
   viewer.style.visibility = "visible";
@@ -88,4 +93,6 @@ function showViewer() {
 
 function closeViewer() {
   viewer.style.visibility = "hidden";
+  loading.style.visibility = "hidden";
+  errored.style.visibility = "hidden";
 }
