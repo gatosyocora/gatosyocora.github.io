@@ -41,7 +41,7 @@ function loadVRM() {
   loader.load(
 
     // URL of the VRM you want to load
-    'http://drive.google.com/uc?export=view&id=18YWLwbV_2U4Amh2EDlYA8aOrql1bpt14',
+    'https://drive.google.com/uc?id=18YWLwbV_2U4Amh2EDlYA8aOrql1bpt14',
 
     // called when the resource is loaded
     ( gltf ) => {
