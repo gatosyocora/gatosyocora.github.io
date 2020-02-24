@@ -294,11 +294,11 @@ div#closeButton,
 div#closeButton img
 {
   position: fixed;
-  right: 30px;
-  top: 30px;
+  right: 2rem;
+  top: 2rem;
   z-index: 9;
-  width: 100px;
-  height: 100px;
+  width: 5rem;
+  height: 5rem;
 }
 
 div#modelviewer div#license{
@@ -327,15 +327,15 @@ div#modelviewer div.message {
 div#floatingbutton {
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
   position: fixed;
-  right: 30px;
-  bottom: 30px;
+  right: 1rem;
+  bottom: 1rem;
   z-index: 1;
 }
 
 div#floatingbutton div#buttonicon,
 div#floatingbutton div#buttonicon img{
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
 }
 
 /* PC */
