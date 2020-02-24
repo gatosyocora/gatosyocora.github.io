@@ -86,9 +86,28 @@ div#navigator div {
   display: inline-block;
   border-left: solid white;
   border-right: solid white;
-  margin: 0.1em;
-  padding: 0.1em;
-  width: 20%;
+}
+
+/* PC */
+@media screen and (min-width: 767px) {
+
+  div#navigator div {
+    margin: 0.1em;
+    padding: 0.1em;
+    width: 20%;
+  }
+
+}
+
+/* smartphone */
+@media screen and (max-width: 767px) {
+
+  div#navigator div {
+    margin: 0 auto;
+    padding: 0;
+    width: 30%;
+  }
+
 }
 
 /*contents*/
