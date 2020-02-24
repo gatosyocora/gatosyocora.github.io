@@ -41,7 +41,7 @@ function loadVRM() {
   loader.load(
 
     // URL of the VRM you want to load
-    'https://drive.google.com/uc?id=18YWLwbV_2U4Amh2EDlYA8aOrql1bpt14',
+    './res/ukon_gatosyocora.vrm',
 
     // called when the resource is loaded
     ( gltf ) => {
